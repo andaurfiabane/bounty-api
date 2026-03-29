@@ -1,4 +1,4 @@
-import { IsString, IsBoolean, IsOptional, IsNotEmpty } from 'class-validator';
+import { IsString, IsBoolean, IsNotEmpty } from 'class-validator';
 
 export class CreatePiratesModuleDto {
   @IsString({ message: 'El nombre debe ser texto' })
@@ -10,6 +10,5 @@ export class CreatePiratesModuleDto {
   tripulacion: string;
 
   @IsBoolean({ message: 'El campo debe ser un valor booleano' })
-  @IsOptional()
-  tieneFrutaDelDiablo?: boolean;
+  tieneFrutaDelDiablo: boolean;
 }

@@ -1,4 +1,4 @@
-import { IsNumber, IsPositive, Min, IsEnum, IsNotEmpty, IsMongoId } from 'class-validator';
+import { IsNumber, Min, IsEnum, IsNotEmpty, IsMongoId } from 'class-validator';
 
 export enum EstadoBounty {
   WANTED = 'Wanted',
@@ -7,7 +7,6 @@ export enum EstadoBounty {
 
 export class CreateBountiesModuleDto {
   @IsNumber({}, { message: 'La cantidad debe ser un número' })
-  @IsPositive({ message: 'La cantidad debe ser positiva' })
   @Min(0, { message: 'La cantidad no puede ser negativa' })
   cantidadBellys: number;
 
