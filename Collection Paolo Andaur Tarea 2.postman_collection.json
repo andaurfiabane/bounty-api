@@ -1,0 +1,384 @@
+{
+  "info": {
+    "_postman_id": "ebaae172-63fe-41cd-948b-41d8d19cce5f",
+    "name": "Collection Paolo Andaur Tarea 2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "144004"
+  },
+  "item": [
+    {
+      "name": "pirates",
+      "item": [
+        {
+          "name": "localhost:3000/pirates *all",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/pirates",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "pirates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/pirates",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"pirateId\", response._id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombre\": \"Luffy\",\r\n  \"tripulacion\": \"Sombrero de Paja\",\r\n  \"tieneFrutaDelDiablo\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/pirates",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "pirates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/pirates id",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/pirates/{{pirateId}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "pirates",
+                "{{pirateId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/pirates",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"pirateId\", response._id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombre\": \"Luffy22\",\r\n  \"tripulacion\": \"Sombrero de Paja\",\r\n  \"tieneFrutaDelDiablo\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/pirates/{{pirateId}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "pirates",
+                "{{pirateId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/pirates",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"pirateId\", response._id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/pirates/{{pirateId}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "pirates",
+                "{{pirateId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "bounties",
+      "item": [
+        {
+          "name": "localhost:3000/bounties *all",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/bounties",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "bounties"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/bounties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"bountyId\", response._id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cantidadBellys\": 500000000,\r\n  \"estado\": \"Wanted\",\r\n  \"pirata\": \"{{pirateId}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/bounties",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "bounties"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/bounties id",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/bounties/{{bountyId}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "bounties",
+                "{{bountyId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/bounties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"bountyId\", response._id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cantidadBellys\": 999999,\r\n  \"estado\": \"Wanted\",\r\n  \"pirata\": \"{{pirateId}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/bounties/{{bountyId}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "bounties",
+                "{{bountyId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:3000/bounties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"bountyId\", response._id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/bounties/{{bountyId}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "bounties",
+                "{{bountyId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "pirateId",
+      "value": ""
+    },
+    {
+      "key": "bountyId",
+      "value": ""
+    }
+  ]
+}
