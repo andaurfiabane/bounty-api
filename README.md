@@ -28,7 +28,7 @@ npm install
 
 ---
 
-## 4. Crear un archivo .env en la raíz del proyecto con el siguiente contenido
+## 4. Crear un archivo .env en la raíz del proyecto con el siguiente contenido (Debes reemplazar el texto tu_url_mongodb con la URL de tu Base de Datos de Mongo)
 
 MONGO_URI=tu_url_mongodb
 
