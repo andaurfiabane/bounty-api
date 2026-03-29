@@ -43,8 +43,7 @@ npm run start
 
 ![Pruebas Unitarias](unit_test.png)
 
+---
 ## Collection Pruebas POSTMAN
 
-Puede utilizar el archivo adjunto dentro de este proyecto. El nombre del archivo es: "Collection Paolo Andaur Tarea 2.postman_collection.json"
-
-(<Collection Paolo Andaur Tarea 2.postman_collection.json>)
+Puede utilizar el archivo adjunto dentro de este proyecto. El nombre del archivo es: "Collection Paolo Andaur Tarea 2.postman_collection.json" y se encuentra en el directorio raíz.
