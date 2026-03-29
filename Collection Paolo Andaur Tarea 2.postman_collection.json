@@ -120,7 +120,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"nombre\": \"Luffy22\",\r\n  \"tripulacion\": \"Sombrero de Paja\",\r\n  \"tieneFrutaDelDiablo\": false\r\n}",
+              "raw": "{\r\n  \"nombre\": \"Luffy__\",\r\n  \"tripulacion\": \"Sombrero de Paja.\",\r\n  \"tieneFrutaDelDiablo\": false\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -213,6 +213,28 @@
           "response": []
         },
         {
+          "name": "localhost:3000/bounties active",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/bounties/active",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "bounties",
+                "active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "localhost:3000/bounties",
           "event": [
             {
@@ -236,7 +258,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"cantidadBellys\": 500000000,\r\n  \"estado\": \"Wanted\",\r\n  \"pirata\": \"{{pirateId}}\"\r\n}",
+              "raw": "{\r\n  \"cantidadBellys\": 2000,\r\n  \"estado\": \"Wanted\",\r\n  \"pirata\": \"{{pirateId}}\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -302,7 +324,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"cantidadBellys\": 999999,\r\n  \"estado\": \"Wanted\",\r\n  \"pirata\": \"{{pirateId}}\"\r\n}",
+              "raw": "{\r\n  \"cantidadBellys\": 5,\r\n  \"estado\": \"Wanted\",\r\n  \"pirata\": \"{{pirateId}}\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
